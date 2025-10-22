@@ -1,0 +1,36 @@
+Node.js download : Windows 설치 프로그램 (.msi)
+cmd node --version
+: v22.21.0
+npm -v
+: 10.9.4
+PowerShell 관리자모드 실행
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+git new Repository
+cmd -> code .
+터미널에 npm init -y 입력
+package.json 생성되면 정상
+터미널에 npm install lodash 입력
+node_modules\lodash\... 생성되면 정상
+index.js생성
+[index.js코드]
+const _ = require("lodash");
+const arr = [1, 2, 3, 4, 5];
+const shuffled = _.shuffle(arr);
+console.log("Shuffled:", shuffled);
+
+터미널에 node index.js 입력
+package.json에 "scripts"내부에 "start":"node index.js", 추가
+터미널에 npm run start 
+npm install -g nodemon 
+nodemon index.js 입력
+Ctrl+c : 탈출문구
+터미널에 npm install parcel-bundler -D 입력
+index.html파일 생성
+<body> 
+    <h1>HELLO WORLD!!!!</h1>
+    <script src="./index.js"></script>
+</body>
+터미널에 npx parcel index.html 입력
+dist폴더 생성되면 정상, localhost:1234 실행하면 라이브서버 기능 사용가능
+npm run build
+npm run deploy
